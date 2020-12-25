@@ -46,21 +46,27 @@ trump_face_encoding = face_recognition.face_encodings(trump_image)[0]
 modi_image = face_recognition.load_image_file("images/Modi.jpg")
 modi_face_encoding = face_recognition.face_encodings(modi_image)[0]
 
-vj_image = face_recognition.load_image_file("images/Vijay.jpg")
-vj_face_encoding = face_recognition.face_encodings(vj_image)[0]
+harika_image = face_recognition.load_image_file("images/Harika.jpeg")
+harika_face_encoding = face_recognition.face_encodings(harika_image)[0]
+
+pratibha_image = face_recognition.load_image_file("images/Pratibha.jpeg")
+pratibha_face_encoding = face_recognition.face_encodings(pratibha_image)[0]
+#vj_image = face_recognition.load_image_file("images/Vijay.jpg")
+#vj_face_encoding = face_recognition.face_encodings(vj_image)[0]
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     obama_face_encoding,
     trump_face_encoding,
     modi_face_encoding,
-    vj_face_encoding
+    harika_face_encoding
 ]
 known_face_names = [
     "Barack Obama",
     "Trump",
     "Modi",
-    "Vijay"
+    "Harika",
+    "Pratibha"
 ]
 
 # Initialize some variables
@@ -122,7 +128,7 @@ cap = None
 if (USE_WEBCAM == True):
     cap = cv2.VideoCapture(0) # Webcam source
 else:
-    cap = cv2.VideoCapture('./test/testvdo.mp4') # Video file source
+    cap = cv2.VideoCapture('./test/Harika.mp4') # Video file source
 
 while cap.isOpened(): # True:
     ret, frame = cap.read()
